@@ -1,0 +1,95 @@
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+  }
+  
+  .card {
+    width: 80%;
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    text-align: start;
+    margin-bottom: 2rem;
+    /* border-bottom: 1px solid rgba(126, 209, 228, 0.56); */
+    border: 1px solid rgba(255, 255, 255, 0.56);
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+    border-radius: 0.5rem;
+
+    /* background: rgba(255, 255, 255, 0.1); */
+  }
+
+  .day{
+    margin-top: 4rem;
+    /* text-decoration: underline; */
+    width: 100%;
+    font-size: 2em;
+    font-weight: 100;
+    text-align: center;
+  }
+  
+  .day:first {
+    margin-top: 0;
+  }
+  
+  .logo{
+    width: 24px;
+  }
+
+  .cardlocation{
+    display: flex;
+    align-items: center;
+  }
+
+  .location{
+    font-weight: 100;
+    font-size: 0.9em;
+    margin-left: 0.75rem;
+  }
+
+  .description{
+    font-weight: 100;
+    font-size: 0.9em;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .end{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9em;
+  }
+
+  @media screen and (min-width: 720px) {
+    .card {
+      min-width: 100%;
+      flex-direction: row;
+    }
+  
+    .cardtime{
+      font-size: 1.5em;
+      font-weight: 100;
+      width: 30%;
+      text-align: end;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  
+    .cardcontent{
+      padding: 20px;
+      padding-left: 3rem;
+      font-weight: 700;
+      width: 70%;
+    }
+  }

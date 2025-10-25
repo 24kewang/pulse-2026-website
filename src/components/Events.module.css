@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 1rem;
+}
+
+.day{
+  background-color: #100e20;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+
+.cardbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 720px) {
+  .row{
+    width: 100%;
+  }
+
+  .day{
+    width: 50%;
+    height: 20px;
+    background-color: transparent;
+    padding-bottom: none;
+    text-align: center; 
+  }
+
+  .datebox{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+    overflow: visible;
+    /* width: 100%; */
+  }
+
+  .cardbox{
+    width: 100%;
+
+  }
+}

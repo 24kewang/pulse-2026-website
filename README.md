@@ -1,4 +1,4 @@
-# Pulse 2024 Website
+# Pulse 2025-2026 Website
 ## Developing locally
 To develop locally, you need to ensure you have node.js and an editor installed.
 - Clone repo

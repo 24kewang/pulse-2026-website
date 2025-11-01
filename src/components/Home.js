@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className={styles.colContainer}>
       <div className={`${styles.mainContent}`}>
-        <img className={styles.logo}  src={require("../assets/2025/full_logo_25.png")} alt="Pulse 2024 Logo Full" />
+        <img className={styles.logo}  src={require("../assets/2025/full_logo_26.png")} alt="Pulse 2025 Logo Full" />
         <div className={styles.welcomeText}>
           Welcome to the fifteenth annual technology conference to celebrate the latest developments in the ECE and CS departments at the University of Illinois Urbana-Champaign!
         </div>

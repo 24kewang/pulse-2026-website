@@ -22,10 +22,10 @@ function ContactUs() {
           <a className={styles.iconBtn} href="https://www.instagram.com/pulse.illinois/" target="_blank" rel="noreferrer">
             <GrInstagram />
           </a>
-          <a className={styles.iconBtn} href="https://www.linkedin.com/company/pulseuiuc/" target="_blank" rel="noreferrer">
+          <a className={styles.iconBtn} href="https://www.linkedin.com/company/pulse-uiuc/" target="_blank" rel="noreferrer">
             <FaLinkedinIn />
           </a>
-          <a className={styles.iconBtn} href="https://linktr.ee/pulse_uiuc" target="_blank" rel="noreferrer">
+          <a className={styles.iconBtn} href="https://linktr.ee/pulse2025" target="_blank" rel="noreferrer">
             <SiLinktree />
           </a>
         </div>

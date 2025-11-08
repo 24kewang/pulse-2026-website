@@ -11,7 +11,7 @@ const EventCard = ({ title, start, end, location, description }) => {
           <h3 className={styles.title}>{title}</h3>
           <p className={styles.description}>{description}</p>
           <div className={styles.cardlocation}>   
-            <img className={styles.logo}  src={require("../assets/2025/location.png")} alt="Pulse 2024 Logo Full" />
+            <img className={styles.logo}  src={require("../assets/2026/location.png")} alt="Pulse 2024 Logo Full" />
             <p className={styles.location}>{location}</p>
             </div>
         </div>

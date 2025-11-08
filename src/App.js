@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Home from "./components/Home";
 // import Events from "./components/Events";
 import Sponsors from "./components/Sponsors";
-// import OurTeam from "./components/OurTeam";
+import OurTeam from "./components/OurTeam";
 import ContactUs from "./components/ContactUs";
 import './App.css';
 
@@ -53,7 +53,7 @@ const AnimatedRoutes = () => {
                 <Events />
                 </motion.div>
                 } /> */}
-              {/* <Route path="/our-team" element={
+              <Route path="/our-team" element={
                 <motion.div
                 initial={{ opacity: 0}}
                 animate={{ opacity: 1}}
@@ -61,7 +61,7 @@ const AnimatedRoutes = () => {
                 transition={{ duration: 0.3 }}
               >
                 <OurTeam />
-                </motion.div>} /> */}
+                </motion.div>} />
               <Route path="/contact-us" element={
                 <motion.div
                 initial={{ opacity: 0}}

@@ -1,15 +1,15 @@
 import styles from "./GroupPics.module.css"
 
 function GroupPics({ data }) {
-  const members = data;
+  if (!data || data.length === 0) return null;
 
   return (
     <div className={styles.container}>
       <div className={styles.row}>
-        {members.map(({ name, img, title }) => (
+        {data.map(({ name, img, title }) => (
           <div key={name} className={styles.picContainer}>
             <div className={styles.frame}>
-              <img src={img} alt={name} />
+              <img src={img} alt={name} loading="lazy" />
             </div>
             <div className={styles.caption}>
               <span className={styles.name}>{name}</span>

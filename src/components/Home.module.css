@@ -4,6 +4,16 @@
   width: 100%;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 .mainContent {
   display: flex;
   flex-direction: column;
@@ -11,6 +21,8 @@
   align-items: center;
   z-index: 5;
   padding: 0 55px;
+  position: relative;
+  color: white;
 }
 
 .welcomeText {
@@ -28,8 +40,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background-image: url('../assets/2026/banner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
   flex-direction: column;
-  padding-top: 105px;
+  /* padding-top: 0px; */
   gap: 75px;
   /* transform: translate(0, -45%); */
 }

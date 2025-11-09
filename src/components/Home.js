@@ -1,4 +1,3 @@
-import Footer from './Footer';
 import styles from './Home.module.css';
 // import { Drawer } from 'antd';
 // import {  useState } from 'react';
@@ -9,6 +8,7 @@ function Home() {
 
   return (
     <div className={styles.colContainer}>
+      <div className={styles.overlay}></div>
       <div className={`${styles.mainContent}`}>
         <img className={styles.logo}  src={require("../assets/2026/full_logo_26.png")} alt="Pulse 2025 Logo Full" />
         <div className={styles.welcomeText}>
@@ -56,7 +56,7 @@ function Home() {
       </div>
       {/* <button className={styles.btn} onClick={clickRegister}>Apply for our staff!</button> */}
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

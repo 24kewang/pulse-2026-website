@@ -1,4 +1,3 @@
-import Footer from "./Footer";
 import { MdEmail } from 'react-icons/md';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
@@ -8,6 +7,7 @@ import styles from "./ContactUs.module.css";
 function ContactUs() {
   return (
     <div className={styles.container}>
+      <div className={styles.overlay}></div>
       <div className={styles.content}>
         <div className={styles.header}>
           Feel free to contact us with any questions about the conference or sponsorship!
@@ -30,7 +30,7 @@ function ContactUs() {
           </a>
         </div>
       </div>
-      <Footer className={styles.footer} />
+      {/* <Footer className={styles.footer} /> */}
     </div>
   )
 }

@@ -1,69 +1,77 @@
 import GroupPics from "./GroupPics";
 import styles from "./OurTeam.module.css";
 
-const members =
-{
-  members: [
+const teamMembers = {
+  directors: [
     {
-      name: "Ben Blade",
-      img: require("../assets/2025/team/ben.jpeg"),
+      name: "Prahit Yaugand",
+      img: require("../assets/2026/team/prahit.jpeg"),
       title: "Co-Director"
     },
     {
-      name: "Akshat Singh",
-      img: require("../assets/2025/team/akshat.jpeg"),
-      title: "Co-Director",
-    },
+      name: "Angela Qian",
+      img: require("../assets/2026/team/angela.jpeg"),
+      title: "Co-Director"
+    }
+  ],
+  treasurer: [
     {
-      name: "Cameron Marchese",
-      img: require("../assets/2025/team/cameron.jpeg"),
+      name: "Paige Nothelfer",
+      img: require("../assets/2026/team/paige.jpeg"),
       title: "Treasurer"
+    }
+  ],
+  logistics: [
+    {
+      name: "Alexander Lau",
+      img: require("../assets/2026/team/alexander.jpeg"),
+      title: "Logistics"
     },
     {
-      name: "Jack Gauer",
-      img: require("../assets/2025/team/jack.jpeg"),
-      title: "Logistics Director"
+      name: "Ryan Varghese",
+      img: require("../assets/2026/team/ryan.jpeg"),
+      title: "Logistics"
+    }
+  ],
+  socialMedia: [
+    {
+      name: "Adrian Lee",
+      img: require("../assets/2026/team/adrian.jpeg"),
+      title: "Social Media"
     },
     {
-      name: "Justin Chen",
-      img: require("../assets/2025/team/justin.jpeg"),
-      title: "Logistics Director"
-    },
+      name: "Racheal Liu",
+      img: require("../assets/2026/team/racheal.jpeg"),
+      title: "Social Media"
+    }
+  ],
+  marketing: [
     {
-      name: "Avaneesh Kumar",
-      img: require("../assets/2025/team/avaneesh.jpeg"),
-      title: "Technical Director"
-    },
+      name: "Upasana Halder",
+      img: require("../assets/2026/team/upasana.jpeg"),
+      title: "Marketing"
+    }
+  ],
+  corporate: [
     {
-      name: "Aryan Gosaliya",
-      img: require("../assets/2025/team/aryan.png"),
-      title: "Technical Director"
-    },
+      name: "Sumayyah Ismail",
+      img: require("../assets/2026/team/sumayyah.jpeg"),
+      title: "Corporate"
+    }
+  ],
+  competitions: [
     {
-      name: "Konark Dhingreja",
-      img: require("../assets/2025/team/konark.png"),
-      title: "Corporate Director"
-    },
+      name: "Dhruv Vohra",
+      img: require("../assets/2026/team/dhruv.jpeg"),
+      title: "Competitions"
+    }
+  ],
+  technical: [
     {
-      name: "Stephanie Eze",
-      img: require("../assets/2025/team/stephanie.jpeg"),
-      title: "Corporate Director"
-    },
-    {
-      name: "Mithesh Ballae Ganesh",
-      img: require("../assets/2025/team/mithesh.png"),
-      title: "Competitions Director"
-    },
-    {
-      name: "Ananya Krishnan",
-      img: require("../assets/2025/team/ananya.jpeg"),
-      title: "Competitions Director"
-    },
-    {
-      name: "Riya Karkhanis",
-      img: require("../assets/2025/team/riya.jpeg"),
-      title: "Social Media and Marketing Director"
-    },
+      name: "Kevin Wang",
+      img: require("../assets/2026/team/kevin.jpeg"),
+      title: "Technical"
+    }
   ]
 }
 
@@ -71,10 +79,46 @@ function OurTeam() {
   return (
     <div className={styles.container}>
       <h1>Our Team</h1>
-      <div className={styles.row}>
-        <GroupPics data={members.members}/>
-      </div>
-      {/* <Footer className={styles.footer} /> */}
+      
+      <section className={styles.teamSection}>
+        <h2>Directors</h2>
+        <GroupPics data={teamMembers.directors} />
+      </section>
+
+      <section className={styles.teamSection}>
+        <h2>Treasurer</h2>
+        <GroupPics data={teamMembers.treasurer} />
+      </section>
+
+      <section className={styles.teamSection}>
+        <h2>Logistics</h2>
+        <GroupPics data={teamMembers.logistics} />
+      </section>
+
+      <section className={styles.teamSection}>
+        <h2>Social Media</h2>
+        <GroupPics data={teamMembers.socialMedia} />
+      </section>
+
+      <section className={styles.teamSection}>
+        <h2>Marketing</h2>
+        <GroupPics data={teamMembers.marketing} />
+      </section>
+
+      <section className={styles.teamSection}>
+        <h2>Corporate</h2>
+        <GroupPics data={teamMembers.corporate} />
+      </section>
+
+      <section className={styles.teamSection}>
+        <h2>Competitions</h2>
+        <GroupPics data={teamMembers.competitions} />
+      </section>
+
+      <section className={styles.teamSection}>
+        <h2>Technical</h2>
+        <GroupPics data={teamMembers.technical} />
+      </section>
     </div>
   )
 }

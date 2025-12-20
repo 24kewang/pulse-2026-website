@@ -1,39 +1,54 @@
-import styles from "./Sponsors.module.css";
+import { useState } from 'react';
+import styles from './Sponsors.module.css';
 
 function Sponsors() {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const sponsors = [
+    {
+      id: 1,
+      title: "Astera Labs",
+      description: "Astera Labs is a global leader in providing purpose-built connectivity solutions specifically designed to tackle data, memory, and networking bottlenecks in rack-scale AI infrastructure. The company utilizes a pioneering software-defined architecture and maintains trusted relationships with hyperscalers to deliver scalable semiconductor-based solutions including PCIe, CXL, and Ethernet technologies."
+    },
+    {
+      id: 2,
+      title: "Texas Instruments",
+      description: "Texas Instruments is a global semiconductor company that designs, manufactures and sells analog and embedded processing chips. Their approximately 80,000 products help over 100,000 customers efficiently manage power, accurately sense and transmit data and provide the core control or processing in their designs, going into markets such as industrial, automotive, personal electronics, enterprise systems and communications equipment."
+    },
+    {
+      id: 3,
+      title: "AMD",
+      description: "AMD is the high performance and adaptive computing leader, powering the products and services that help solve the world’s most important challenges. Their technologies advance the future of the data center, embedded, gaming and PC markets."
+    }
+  ];
+
   return (
     <div className={styles.container}>
-      <h1>Information for corporate</h1>
-
-      <h1>Pamphlet</h1>
-      <iframe 
-      title="Pamphlet"
-      src="https://drive.google.com/file/d/10bZv_SIzxny86-qV1fnB0BxYDMy78eUA/preview" width="100%" height="980px">
-      </iframe>
-      
-      <h1>Corporate Package</h1>
-      <iframe 
-        title="Corporate Package"
-        src="https://drive.google.com/file/d/1F_wRZDvlvL2i5oL2lnWA6z93cqXYtHm_/preview" allow="autoplay">  
-      </iframe>
-
-     
-      
-      {/* <h2>TBA</h2> */}
-      {/* <div>
-        <div className={styles.col}>
-          <div className={styles.row}>
-            <img className={styles.logo} src={require("../assets/2023/AMD.png")} alt="AMD Logo" />
+      <h1>Our Sponsors</h1>
+      <div className={styles.sponsorGrid}>
+        {sponsors.map((sponsor, index) => (
+          <div
+            key={sponsor.id}
+            className={`${styles.sponsorCard} ${styles[`delay${index}`]}`}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <img
+              src={require(`../assets/2026/sponsor-${index + 1}.png`)}
+              alt={sponsor.title}
+              className={styles.sponsorImage}
+            />
+            {hoveredIndex === index && (
+              <div className={styles.descriptionOverlay}>
+                {/* <h3>{sponsor.title}</h3> */}
+                <p>{sponsor.description}</p>
+              </div>
+            )}
           </div>
-          <div className={styles.row}>
-            <img className={styles.logo} src={require("../assets/2023/Capital One white.png")} alt="Capital One Logo" />
-            <img className={styles.logo} src={require("../assets/2023/Texas Instruments white.png")} alt="Texas Instruments Logo" />
-          </div>
-        </div>
-      </div> */}
-      {/* <Footer className={styles.footer} /> */}
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Sponsors
+export default Sponsors;

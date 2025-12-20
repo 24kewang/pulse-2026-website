@@ -36,6 +36,14 @@
   cursor: pointer;
   opacity: 0;
   animation: fadeInUp 0.6s ease-out forwards;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.sponsorCard:hover {
+  width: 340px;
+  height: 360px;
+  z-index: 10;
 }
 
 .sponsorCard.delay0 {
@@ -106,15 +114,15 @@
   }
 }
 
-/* .descriptionOverlay h3 {
-  
+.descriptionOverlay h3 {
+  /* Dynamic sizing: min 1rem, preferred 7% of container, max 1.5rem */
   font-size: clamp(1rem, 7vw, 1.5rem);
   margin-bottom: 0.5rem;
   margin-top: 0;
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
-} */
+}
 
 .descriptionOverlay p {
   /* Dynamic sizing: min 0.7rem, preferred 5% of container, max 0.95rem */
@@ -126,7 +134,7 @@
   hyphens: auto;
   /* Add scrolling if text is still too long */
   overflow-y: auto;
-  max-height: calc(100% - 2rem);
+  max-height: 100%;
 }
 
 /* Custom minimal scrollbar styling */
@@ -153,7 +161,6 @@
   scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
 }
 
-
 @media (max-width: 768px) {
   .sponsorGrid {
     flex-direction: column;
@@ -163,6 +170,11 @@
   .sponsorCard {
     width: 150px;
     height: 150px;
+  }
+  
+  .sponsorCard:hover {
+    width: 255px;
+    height: 270px;
   }
 
   .container h1 {

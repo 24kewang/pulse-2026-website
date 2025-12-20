@@ -18,7 +18,7 @@ function Sponsors() {
     {
       id: 3,
       title: "AMD",
-      description: "AMD is the high performance and adaptive computing leader, powering the products and services that help solve the world’s most important challenges. Their technologies advance the future of the data center, embedded, gaming and PC markets."
+      description: "AMD is the high performance and adaptive computing leader, powering the products and services that help solve the world’s most important challenges. Their technologies advance the future of the data center, embedded, gaming and PC markets. Founded in 1969 as a Silicon Valley start-up, the AMD journey began with dozens of employees who were passionate about creating leading-edge semiconductor products. AMD has grown into a global company setting the standard for modern computing, with many important industry firsts and major technological achievements along the way."
     }
   ];
 

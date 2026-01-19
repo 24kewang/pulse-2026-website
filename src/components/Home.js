@@ -14,6 +14,16 @@ function Home() {
         <div className={styles.welcomeText}>
           Welcome to the fifteenth annual technology conference to celebrate the latest developments in the ECE and CS departments at the University of Illinois Urbana-Champaign!
         </div>
+        <a 
+          href="about:blank"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.registerLink}
+        >
+          <button className={styles.btn}>
+            Register
+          </button>
+        </a>
         {/* <div className={styles.registration}>
           <button 
             className={styles.btn}

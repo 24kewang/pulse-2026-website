@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from "./components/Home";
-// import Events from "./components/Events";
+import Events from "./components/Events";
 import Corporate from "./components/Corporate";
 import OurTeam from "./components/OurTeam";
 import Sponsors from "./components/Sponsors";
@@ -44,7 +44,7 @@ const AnimatedRoutes = () => {
                 <Corporate />
                 </motion.div>
               } />
-              {/* <Route path='/events' element={
+              <Route path='/events' element={
                 <motion.div
                 initial={{ opacity: 0}}
                 animate={{ opacity: 1}}
@@ -53,7 +53,7 @@ const AnimatedRoutes = () => {
               >
                 <Events />
                 </motion.div>
-                } /> */}
+                } />
               <Route path="/our-team" element={
                 <motion.div
                 initial={{ opacity: 0}}

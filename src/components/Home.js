@@ -15,7 +15,7 @@ function Home() {
           Welcome to the fifteenth annual technology conference to celebrate the latest developments in the ECE and CS departments at the University of Illinois Urbana-Champaign!
         </div>
         <a 
-          href="about:blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfIoXwBuUUWegPMS4CGAqj2qh5_p-D1U8FhLlwMYkFD4kCV0Q/viewform?usp=sharing&ouid=109431193062771291886"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.registerLink}

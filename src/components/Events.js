@@ -8,25 +8,9 @@ const data = [
   {
     "day": "Monday, February 16",
     "shortDay": "Mon",
-    // "events": [
-    //   {
-    //     "title": "Opening Ceremony(Free T-shirts)",
-    //     "start": "3:00pm",
-    //     "end": "3:45pm",
-    //     "description": "More details soon",
-    //     "location": ""
-    //   },
-    //   {
-    //     "title": "TI/AMD event",
-    //     "start": "4:30pm",
-    //     "end": "6:45pm",
-    //     "description": "More details soon",
-    //     "location": ""
-    //   }
-    // ]
     "events": [
       {
-        "title": "Opening Ceremony(Free T-shirts)",
+        "title": "Opening Ceremony (Free T-shirts)",
         "start": "3:00pm",
         "end": "3:45pm",
         "description": "More details soon",
@@ -38,46 +22,60 @@ const data = [
     "day": "Tuesday, February 17",
     "shortDay": "Tue",
     "events": [
-      // {
-      //   "title": "Ti or amd event",
-      //   "start": "4:15pm",
-      //   "end": "7:00pm",
-      //   "description": "More details soon",
-      //   "location": ""
-      // }
+      {
+        "title": "AMD Industry Speaker Event",
+        "start": "5:00pm",
+        "end": "6:00pm",
+        "description": "More details soon",
+        "location": ""
+      },
+      {
+        "title": "AMD Networking Dinner + Student Q&A",
+        "start": "6:00pm",
+        "end": "7:00pm",
+        "description": "More details soon",
+        "location": ""
+      }
     ]
   },
   {
     "day": "Wednesday, February 18",
     "shortDay": "Wed",
     "events": [
-      // {
-      //   "title": "astera",
-      //   "start": "7:30am",
-      //   "end": "6:30pm",
-      //   "description": "More details soon",
-      //   "location": ""
-      // }
+      {
+        "title": "Astera Labs Day",
+        "start": "TBD",
+        "end": "TBD",
+        "description": "3-4 events (times not confirmed yet)",
+        "location": ""
+      }
     ]
   },
   {
     "day": "Thursday, February 19",
     "shortDay": "Thu",
     "events": [
-      // {
-      //   "title": "amd",
-      //   "start": "2:00pm",
-      //   "end": "4:30pm",
-      //   "description": "More details soon",
-      //   "location": ""
-      // },
-      // {
-      //   "title": "astera",
-      //   "start": "6:00pm",
-      //   "end": "8:30pm",
-      //   "description": "More details soon",
-      //   "location": ""
-      // }
+      {
+        "title": "Women in Tech Panel",
+        "start": "10:00am",
+        "end": "12:00pm",
+        "description": "More details soon",
+        "location": ""
+      },
+      {
+        "title": "TI Career Path Alum Talk",
+        "start": "4:00pm",
+        "end": "5:00pm",
+        "description": "More details soon",
+        "location": ""
+      },
+      {
+        "title": "Women in Tech–Themed Event (AMD)",
+        "start": "7:00pm",
+        "end": "8:00pm",
+        "description": "More details soon",
+        "location": ""
+      }
     ]
   },
   {
@@ -85,23 +83,16 @@ const data = [
     "shortDay": "Fri",
     "events": [
       {
-        "title": "Software Competition - Algorithmic",
-        "start": "3:00pm",
-        "end": "6:00pm",
+        "title": "Software Algorithmic Competition",
+        "start": "3:30pm",
+        "end": "5:30pm",
         "description": "More details soon",
         "location": "Tentatively ECEB 3002"
       },
       {
-        "title": "Dinner Break",
-        "start": "6:00pm",
-        "end": "6:30pm",
-        "description": "More details soon",
-        "location": ""
-      },
-      {
         "title": "Design Competition",
-        "start": "6:30pm",
-        "end": "9:30pm",
+        "start": "6:00pm",
+        "end": "9:00pm",
         "description": "More details soon",
         "location": "Tentatively ECEB 3002"
       }
@@ -125,7 +116,7 @@ const data = [
     "shortDay": "Sun",
     "events": [
       {
-        "title": "Software Competition - Main",
+        "title": "Software Competition",
         "start": "10:00am",
         "end": "8:00pm",
         "description": "More details soon",

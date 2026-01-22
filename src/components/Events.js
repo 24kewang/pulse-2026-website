@@ -43,10 +43,24 @@ const data = [
     "shortDay": "Wed",
     "events": [
       {
-        "title": "Astera Labs Day",
-        "start": "TBD",
-        "end": "TBD",
-        "description": "3-4 events (times not confirmed yet)",
+        "title": "Astera Labs Lightning Talk",
+        "start": "10:00am",
+        "end": "11:00am",
+        "description": "More details soon",
+        "location": ""
+      },
+      {
+        "title": "Astera Labs Workshop",
+        "start": "12:00pm",
+        "end": "2:00pm",
+        "description": "More details soon",
+        "location": ""
+      },
+      {
+        "title": "Astera Labs Networking Dinner",
+        "start": "6:00pm",
+        "end": "7:00pm",
+        "description": "More details soon",
         "location": ""
       }
     ]

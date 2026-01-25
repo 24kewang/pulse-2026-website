@@ -57,7 +57,12 @@ const teamMembers = {
       name: "Sumayyah Ismail",
       img: "/assets/2026/team/sumayyah.jpeg",
       title: "Corporate"
-    }
+    },
+    {
+      name: "Giovanni Ortega",
+      img: "/assets/2026/team/gio.png",
+      title: "Corporate"
+    },
   ],
   competitions: [
     {

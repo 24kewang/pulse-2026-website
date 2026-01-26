@@ -1,0 +1,128 @@
+
+  .row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+}
+
+.card {
+  width: 80%;
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: start;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(126, 209, 228, 0.4);
+  box-shadow: 0px 0px 8px rgba(126, 209, 228, 0.2);
+  border-radius: 0.75rem;
+  background: rgba(16, 14, 32, 0.5);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: default;
+  transform: translateY(0);
+}
+
+.card:hover {
+  border-color: rgba(126, 209, 228, 0.8);
+  box-shadow: 0px 0px 20px rgba(126, 209, 228, 0.5), 0px 0px 40px rgba(126, 209, 228, 0.25);
+  background: rgba(16, 14, 32, 0.8);
+  transform: translateY(-8px);
+}
+
+.day {
+  margin-top: 4rem;
+  width: 100%;
+  font-size: 2em;
+  font-weight: 100;
+  text-align: center;
+}
+
+.day:first-child {
+  margin-top: 0;
+}
+
+.title {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.cardlocation {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.location {
+  font-weight: 500;
+  font-size: 0.85em;
+  margin-left: 0.5rem;
+  color: rgba(126, 209, 228, 0.9);
+}
+
+.description {
+  font-weight: 400;
+  font-size: 0.9em;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+.end {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85em;
+  margin: 0.2rem 0 0 0;
+}
+
+.time {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1em;
+  margin: 0;
+}
+
+@media screen and (min-width: 720px) {
+  .card {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .cardtime {
+    font-size: 1.1em;
+    font-weight: 400;
+    width: auto;
+    min-width: 80px;
+    text-align: right;
+    font-family: 'Source Sans Pro', sans-serif;
+    flex-shrink: 0;
+    padding-right: 1.5rem;
+    border-right: 2px solid rgba(126, 209, 228, 0.3);
+  }
+
+  .cardcontent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

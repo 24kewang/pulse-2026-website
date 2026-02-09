@@ -29,14 +29,14 @@ const data = [
         "start": "5:00pm",
         "end": "6:00pm",
         "description": "More details soon",
-        "location": ""
+        "location": "ECEB 3002"
       },
       {
         "title": "AMD Networking Dinner + Student Q&A",
         "start": "6:00pm",
         "end": "7:00pm",
         "description": "More details soon",
-        "location": ""
+        "location": "ECEB 3002"
       }
     ]
   },
@@ -49,21 +49,28 @@ const data = [
         "start": "10:00am",
         "end": "11:00am",
         "description": "More details soon",
-        "location": ""
+        "location": "ECEB 3081"
       },
       {
         "title": "Astera Labs Workshop",
         "start": "12:00pm",
         "end": "2:00pm",
         "description": "More details soon",
-        "location": ""
+        "location": "ECEB 3002"
+      },
+      {
+        "title": "AMD Coffee Chats",
+        "start": "3:00pm",
+        "end": "5:00pm",
+        "description": "More details soon",
+        "location": "ECEB 2017"
       },
       {
         "title": "Astera Labs Networking Dinner",
         "start": "6:00pm",
         "end": "7:00pm",
         "description": "More details soon",
-        "location": ""
+        "location": "ECEB 2015"
       }
     ]
   },
@@ -76,21 +83,21 @@ const data = [
         "start": "10:00am",
         "end": "12:00pm",
         "description": "More details soon",
-        "location": ""
+        "location": "ECEB 1013"
       },
       {
         "title": "TI Career Path Alum Talk",
         "start": "4:00pm",
         "end": "5:00pm",
         "description": "More details soon",
-        "location": ""
+        "location": "ECEB 1015"
       },
       {
         "title": "Women in Tech–Themed Event (AMD)",
         "start": "7:00pm",
         "end": "8:00pm",
         "description": "More details soon",
-        "location": ""
+        "location": "ECEB 2017"
       }
     ]
   },
@@ -103,14 +110,14 @@ const data = [
         "start": "3:30pm",
         "end": "5:30pm",
         "description": "More details soon",
-        "location": "Tentatively ECEB 3002"
+        "location": "ECEB 3017"
       },
       {
         "title": "Design Competition",
         "start": "6:00pm",
         "end": "9:00pm",
         "description": "More details soon",
-        "location": "Tentatively ECEB 3002"
+        "location": "ECEB 3017"
       }
     ]
   },
@@ -123,7 +130,7 @@ const data = [
         "start": "10:00am",
         "end": "8:00pm",
         "description": "More details soon",
-        "location": "Tentatively ECEB 3002"
+        "location": "ECEB 3017"
       }
     ]
   },
@@ -136,7 +143,7 @@ const data = [
         "start": "10:00am",
         "end": "8:00pm",
         "description": "More details soon",
-        "location": "Tentatively ECEB 3002"
+        "location": "ECEB 3017"
       }
     ]
   }

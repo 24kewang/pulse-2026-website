@@ -69,8 +69,8 @@ const data = [
         title: "Astera Labs Networking Dinner",
         start: "6:00pm",
         end: "7:00pm",
-        description: "More details soon",
-        location: "ECEB 2015"
+        description: "Private Event",
+        location: "Invite-Only"
       }
     ]
   },

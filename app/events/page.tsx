@@ -8,146 +8,147 @@ import styles from "./page.module.css";
 // Your event data
 const data = [
   {
-    "day": "Monday, February 16",
-    "shortDay": "Mon",
-    "events": [
+    day: "Monday, February 16",
+    shortDay: "Mon",
+    events: [
       {
-        "title": "Opening Ceremony (Free T-shirts)",
-        "start": "3:00pm",
-        "end": "3:45pm",
-        "description": "More details soon",
-        "location": ""
+        title: "Opening Ceremony (Free T-shirts)",
+        start: "3:00pm",
+        end: "3:45pm",
+        description: "Kick off the week with our Opening Ceremony! Learn what’s ahead, meet the team, and make sure to grab a free T-shirt!",
+        location: "ECEB 2017"
       }
     ]
   },
   {
-    "day": "Tuesday, February 17",
-    "shortDay": "Tue",
-    "events": [
+    day: "Tuesday, February 17",
+    shortDay: "Tue",
+    events: [
       {
-        "title": "AMD Industry Speaker Event",
-        "start": "5:00pm",
-        "end": "6:00pm",
-        "description": "More details soon",
-        "location": "ECEB 3002"
+        title: "AMD Industry Speaker Event",
+        start: "5:00pm",
+        end: "6:00pm",
+        description: "Hear from AMD engineers as they share their insights on technical challenges, industry trends, and career opportunities in tech",
+        location: "ECEB 3002"
       },
       {
-        "title": "AMD Networking Dinner + Student Q&A",
-        "start": "6:00pm",
-        "end": "7:00pm",
-        "description": "More details soon",
-        "location": "ECEB 3002"
+        title: "AMD Networking Dinner + Student Q&A",
+        start: "6:00pm",
+        end: "7:00pm",
+        description: "Grab dinner with AMD professionals while asking questions about careers, internships, and life in the tech industry",
+        location: "ECEB 3002"
       }
     ]
   },
   {
-    "day": "Wednesday, February 18",
-    "shortDay": "Wed",
-    "events": [
+    day: "Wednesday, February 18",
+    shortDay: "Wed",
+    events: [
       {
-        "title": "Astera Labs Lightning Talk",
-        "start": "10:00am",
-        "end": "11:00am",
-        "description": "More details soon",
-        "location": "ECEB 3081"
+        title: "Astera Labs Lightning Talk",
+        start: "10:00am",
+        end: "11:00am",
+        description: "Inside Astera Labs' Hardware Engineering and Board Development Lifecycle\nIn this session, Andrew Kuznetsov will introduce Astera Labs and highlight the critical role its data‑centric connectivity solutions play in enabling modern AI and cloud computing infrastructure. He will provide an inside look at the board development lifecycle within Astera Labs’ Hardware Engineering organization, detailing how cross‑functional teams bring complex hardware products from concept to production. Andrew will also explain how his work as a Platform Software and Diagnostics Engineer contributes to validating and enabling these next‑generation systems.\nAndrew Kuznetsov is a 2024 college grad from the University of California, Santa Cruz, currently working at Astera Labs as a Platform Software and Diagnostics Engineer.",
+        location: "ECEB 3081"
       },
       {
-        "title": "Astera Labs Workshop",
-        "start": "12:00pm",
-        "end": "2:00pm",
-        "description": "More details soon",
-        "location": "ECEB 3002"
+        title: "Astera Labs Workshop",
+        start: "12:00pm",
+        end: "2:00pm",
+        description: "A hands-on workshop led by Astera Labs engineers that focuses on practical skills and real-world applications",
+        location: "ECEB 3002"
       },
       {
-        "title": "AMD Coffee Chats",
-        "start": "3:00pm",
-        "end": "5:00pm",
-        "description": "More details soon",
-        "location": "ECEB 2017"
+        title: "AMD Coffee Chats",
+        start: "3:00pm",
+        end: "5:00pm",
+        description: "Join us for an engaging evening designed to connect top engineering students with AMD technical professionals through a dynamic and interactive format.\n\nWhat to Expect:\nStudents will rotate through small-group technical roundtables, meeting with three AMD engineers. Each speed‑round conversation will last up to 10 minutes, giving students the chance to ask questions about engineering roles, technologies, career paths, and life at AMD.",
+        location: "ECEB 2017 and MEL 2005"
       },
       {
-        "title": "Astera Labs Networking Dinner",
-        "start": "6:00pm",
-        "end": "7:00pm",
-        "description": "More details soon",
-        "location": "ECEB 2015"
+        title: "Astera Labs Networking Dinner",
+        start: "6:00pm",
+        end: "7:00pm",
+        description: "More details soon",
+        location: "ECEB 2015"
       }
     ]
   },
   {
-    "day": "Thursday, February 19",
-    "shortDay": "Thu",
-    "events": [
+    day: "Thursday, February 19",
+    shortDay: "Thu",
+    events: [
       {
-        "title": "Women in Tech Panel",
-        "start": "10:00am",
-        "end": "12:00pm",
-        "description": "More details soon",
-        "location": "ECEB 1013"
+        title: "Women in Tech Panel",
+        start: "10:00am",
+        end: "12:00pm",
+        description: "Industry professionals from AMD, TI, and Astera Labs discuss their journeys, challenges, and advice for building a career in tech. Open to all!",
+        location: "ECEB 1013"
       },
       {
-        "title": "TI Career Path Alum Talk",
-        "start": "4:00pm",
-        "end": "5:00pm",
-        "description": "More details soon",
-        "location": "ECEB 1015"
+        title: "TI Career Path Alum Talk",
+        start: "4:00pm",
+        end: "5:00pm",
+        description: "Get to hear about a TI alum about their career journey and what to expect during the transition from school to industry.",
+        location: "ECEB 1015"
       },
       {
-        "title": "Women in Tech–Themed Event (AMD)",
-        "start": "7:00pm",
-        "end": "8:00pm",
-        "description": "More details soon",
-        "location": "ECEB 2017"
+        title: "Women in Tech–Themed Event (AMD)",
+        start: "7:00pm",
+        end: "8:00pm",
+        description: "More details soon",
+        location: "ECEB 2017"
       }
     ]
   },
   {
-    "day": "Friday, February 20",
-    "shortDay": "Fri",
-    "events": [
+    day: "Friday, February 20",
+    shortDay: "Fri",
+    events: [
       {
-        "title": "Software Algorithmic Competition",
-        "start": "3:30pm",
-        "end": "5:30pm",
-        "description": "More details soon",
-        "location": "ECEB 3017"
+        title: "Software Algorithmic Competition",
+        start: "3:30pm",
+        end: "5:30pm",
+        description: "Team up to solve fast-paced coding problems that challenge both logic and collaboration.",
+        location: "ECEB 3017"
       },
       {
-        "title": "Design Competition",
-        "start": "6:00pm",
-        "end": "9:00pm",
-        "description": "More details soon",
-        "location": "ECEB 3017"
+        title: "Design Competition",
+        start: "6:00pm",
+        end: "9:00pm",
+        description: "Tackle an open-ended engineering challenge that warrants creativity, innovation, and thoughtful design.",
+        location: "ECEB 3017"
       }
     ]
   },
   {
-    "day": "Saturday, February 21",
-    "shortDay": "Sat",
-    "events": [
+    day: "Saturday, February 21",
+    shortDay: "Sat",
+    events: [
       {
-        "title": "Hardware Competition",
-        "start": "10:00am",
-        "end": "8:00pm",
-        "description": "More details soon",
-        "location": "ECEB 3017"
+        title: "Hardware Competition",
+        start: "10:00am",
+        end: "8:00pm",
+        description: "Design and build a hardware solution in a fast-paced and hands-on team challenge!",
+        location: "ECEB 3017"
       }
     ]
   },
   {
-    "day": "Sunday, February 22",
-    "shortDay": "Sun",
-    "events": [
+    day: "Sunday, February 22",
+    shortDay: "Sun",
+    events: [
       {
-        "title": "Software Competition",
-        "start": "10:00am",
-        "end": "8:00pm",
-        "description": "More details soon",
-        "location": "ECEB 3017"
+        title: "Software Competition",
+        start: "10:00am",
+        end: "8:00pm",
+        description: "Put your coding skills to the test in a software challenge to close out the week.",
+        location: "ECEB 3017"
       }
     ]
   }
 ];
+
 
 export default function Events() {
   const [selectedIndex, setSelectedIndex] = useState(0);

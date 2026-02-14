@@ -109,14 +109,14 @@ const data = [
         title: "Software Algorithmic Competition",
         start: "3:30pm",
         end: "5:30pm",
-        description: "Team up to solve fast-paced coding problems that challenge both logic and collaboration.",
+        description: "Solve fast-paced coding problems that challenge your programming and software design skills. Over $200 in prizes!",
         location: "ECEB 3017"
       },
       {
         title: "Design Competition",
         start: "6:00pm",
         end: "9:00pm",
-        description: "Tackle an open-ended engineering challenge that warrants creativity, innovation, and thoughtful design.",
+        description: "Tackle an open-ended engineering challenge that warrants creativity, innovation, and thoughtful design. Over $100 in prizes!",
         location: "ECEB 3017"
       }
     ]
@@ -129,7 +129,7 @@ const data = [
         title: "Hardware Competition",
         start: "10:00am",
         end: "8:00pm",
-        description: "Design and build a hardware solution in a fast-paced and hands-on team challenge!",
+        description: "Design and build a hardware solution in a fast-paced and hands-on team challenge! Over $700 in prizes!",
         location: "ECEB 3017"
       }
     ]
@@ -142,7 +142,7 @@ const data = [
         title: "Software Competition",
         start: "10:00am",
         end: "8:00pm",
-        description: "Put your coding skills to the test in a software challenge to close out the week.",
+        description: "Put your coding skills to the test in a software hackathon to close out the week. Over $700 in prizes!",
         location: "ECEB 3017"
       }
     ]

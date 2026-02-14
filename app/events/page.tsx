@@ -59,11 +59,11 @@ const data = [
         location: "ECEB 3002"
       },
       {
-        title: "AMD Coffee Chats",
+        title: "AMD Roundtable Discussion",
         start: "3:00pm",
         end: "5:00pm",
         description: "Join us for an engaging evening designed to connect top engineering students with AMD technical professionals through a dynamic and interactive format.\n\nWhat to Expect:\nStudents will rotate through small-group technical roundtables, meeting with three AMD engineers. Each speed‑round conversation will last up to 10 minutes, giving students the chance to ask questions about engineering roles, technologies, career paths, and life at AMD.",
-        location: "ECEB 2017 and MEL 2005"
+        location: "ECEB 2017"
       },
       {
         title: "Astera Labs Networking Dinner",
@@ -96,7 +96,7 @@ const data = [
         title: "Women in Tech–Themed Event (AMD)",
         start: "7:00pm",
         end: "8:00pm",
-        description: "More details soon",
+        description: "Join AMD and Women in Tech for an exciting discussion!",
         location: "ECEB 2017"
       }
     ]

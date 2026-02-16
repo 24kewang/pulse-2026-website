@@ -28,7 +28,7 @@ const data = [
         title: "AMD Industry Speaker Event",
         start: "5:00pm",
         end: "6:00pm",
-        description: "Hear from AMD engineers as they share their insights on technical challenges, industry trends, and career opportunities in tech",
+        description: "Hear from an AMD engineer as they share their insights on technical challenges, industry trends, and career opportunities in tech. The presenter will be Dr. Franklin Bodine, who holds a Ph.D. in Electrical and Computer Engineering from UIUC. He’ll be speaking about his career journey and sharing insights on his path from UIUC to AMD.",
         location: "ECEB 3002"
       },
       {

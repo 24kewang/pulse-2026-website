@@ -1,9 +1,14 @@
 import Image from 'next/image';
+import EventMarquee from '@/components/EventMarquee';
+import EventPreview from '@/components/EventPreview';
 import styles from './page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.colContainer}>
+      <div className={styles.marqueeWrapper}>
+        <EventMarquee />
+      </div>
       <div className={styles.overlay}></div>
       <div className={styles.mainContent}>
         <Image 
@@ -27,6 +32,7 @@ export default function Home() {
             Register
           </button>
         </a>
+        <EventPreview />
       </div>
     </div>
   )

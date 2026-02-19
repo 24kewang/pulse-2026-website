@@ -108,6 +108,52 @@
   align-items: center;
   gap: 2rem;
 }
+.eventPreview {
+  margin-top: 30px;
+  margin-bottom: 70px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  padding: 12px;
+  max-width: 520px;
+}
+
+/* Ensure marquee sits under a fixed navbar */
+.marqueeWrapper {
+  width: 100%;
+  margin-top: var(--navbar-height, 100px);
+}
+
+.previewHeader {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+.eventItem {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  align-items: flex-start;
+}
+.eventTime {
+  min-width: 88px;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+}
+.eventTitle {
+  flex: 1;
+  font-size: 0.98rem;
+  color: #fff;
+}
+.eventEmpty {
+  padding: 8px 0;
+  color: rgba(255,255,255,0.6);
+}
+.previewFooter {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
 
 @media screen and (max-width: 650px) {
   .colContainer {

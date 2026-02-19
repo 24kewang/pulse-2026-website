@@ -64,7 +64,8 @@ export default function EventMarquee() {
 
         if (currentMinutes >= startMinutes && currentMinutes < endMinutes) {
           // Current time is during this event
-          text = `${event.title.toUpperCase()} HAPPENING NOW IN ${event.location.toUpperCase()}! ${event.description.toUpperCase()}`;
+          const foodText = event.food !== 'None' ? `${event.food.toUpperCase()} WILL BE PROVIDED!` : '';
+          text = `${event.title.toUpperCase()} HAPPENING NOW IN ${event.location.toUpperCase()}! ${foodText}`;
           setMarqueeText(text);
           setIsLoading(false);
           return;
@@ -120,7 +121,8 @@ export default function EventMarquee() {
     }
 
     if (nextEvent) {
-      text = `UPCOMING: ${nextEvent.title.toUpperCase()} FROM ${nextEvent.start.toUpperCase()} TO ${nextEvent.end.toUpperCase()} AT ${nextEvent.location.toUpperCase()}! ${nextEvent.description.toUpperCase()}`;
+      const foodText = nextEvent.food !== 'None' ? `${nextEvent.food.toUpperCase()} WILL BE PROVIDED!` : '';
+      text = `UPCOMING: ${nextEvent.title.toUpperCase()} FROM ${nextEvent.start.toUpperCase()} TO ${nextEvent.end.toUpperCase()} AT ${nextEvent.location.toUpperCase()}! ${foodText}`;
     } else {
       text = 'THANKS FOR ATTENDING THE 2026 PULSE CONFERENCE';
     }

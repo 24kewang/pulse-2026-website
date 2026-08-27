@@ -13,7 +13,6 @@ export default function Events() {
       const today = new Date();
       const formattedDate = today.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
       const idx = data.findIndex((d) => d.day && d.day.includes(formattedDate));
-      console.error(formattedDate);
       return idx !== -1 ? idx : 0;
     } catch (e) {
       return 0;
@@ -24,7 +23,7 @@ export default function Events() {
 
   return (
     <div className={styles.container}>
-      <h1>Event Schedule</h1>
+      <h1>2026 Event Schedule</h1>
       
       {/* Date Navigation Tabs - Desktop */}
       <div className={styles.navContainer}>

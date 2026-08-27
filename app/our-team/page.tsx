@@ -83,7 +83,7 @@ const teamMembers = {
 export default function OurTeam() {
   return (
     <div className={styles.container}>
-      <h1>Our Team</h1>
+      <h1>2025-26 Team</h1>
       
       <section className={styles.teamSection}>
         <h2>Directors</h2>

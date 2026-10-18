@@ -63,7 +63,7 @@
 }
 
 .dateDropdown option {
-  background: #0a1f20;
+  background: #0b2066;
   color: white;
   padding: 0.5rem;
 }
@@ -143,13 +143,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.day{
+.day {
   background-color: #100e20;
   padding-bottom: 0.5rem;
   text-align: center;
 }
 
-.cardbox{
+.cardbox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,19 +189,19 @@
     gap: 1.5rem;
   }
 
-  .row{
+  .row {
     width: 100%;
   }
 
-  .day{
+  .day {
     width: 50%;
     height: 20px;
     background-color: transparent;
     padding-bottom: none;
-    text-align: center; 
+    text-align: center;
   }
 
-  .datebox{
+  .datebox {
     display: flex;
     justify-content: space-around;
     padding: 1rem;
@@ -211,7 +211,7 @@
     /* width: 100%; */
   }
 
-  .cardbox{
+  .cardbox {
     width: 100%;
   }
 }

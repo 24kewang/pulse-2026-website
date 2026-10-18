@@ -10,15 +10,15 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Pulse 2026",
+  title: "Pulse 2027",
   description: "The fifteenth annual technology conference celebrating the latest developments in the ECE and CS departments at the University of Illinois Urbana-Champaign",
   icons: {
     icon: [
       { url: '/favicon.png', type: 'image/png' },
-      { url: '/assets/2026/Icon_transparent.png', type: 'image/png' }
+      { url: '/assets/2027/Icon_transparent.png', type: 'image/png' }
     ],
     shortcut: '/favicon.png',
-    apple: '/assets/2026/Icon_transparent.png',
+    apple: '/assets/2027/Icon_transparent.png',
   },
 };
 

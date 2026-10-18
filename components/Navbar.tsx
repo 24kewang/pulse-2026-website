@@ -25,8 +25,8 @@ const Navbar = () => {
   <Link href="/">
         <Image 
           className={styles.mainLogo} 
-          src="/assets/2026/Icon_transparent.png" 
-          alt="Pulse 2026 Logo"
+          src="/assets/2027/Icon_transparent.png" 
+          alt="Pulse 2027 Logo"
           width={80}
           height={80}
         />

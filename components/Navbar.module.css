@@ -40,7 +40,7 @@
 .link:hover,
 .active {
   /* text-decoration: underline; */
-  background-color:  rgba(17, 93, 27, 0.56);
+  background-color:  #BF52BA;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;

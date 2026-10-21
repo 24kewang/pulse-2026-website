@@ -1,14 +1,17 @@
-// Proposed UI fields only; confirm the API contract before integration.
+// Matches the previous sponsor cards; confirm the API contract before integration.
 export interface Sponsor {
-  id: string;
-  name: string;
+  id: number;
+  title: string;
+  description: string;
 }
 
 /*
 Future server-side API template (intentionally inactive).
 No endpoint is known yet. Do not enable this until the team confirms the URL,
 response shape, authentication, and caching requirements. This example assumes
-a JSON array of sponsors with string IDs and names; adapt it to the real API.
+a JSON array matching last year's numeric IDs, titles, and descriptions; adapt
+it to the real API. Historical data and the reusable card JSX are commented in
+app/sponsors/page.tsx, with their original styles in page.module.css.
 
 async function getSponsors(endpoint: string): Promise<Sponsor[]> {
   const response = await fetch(endpoint, { cache: 'no-store' });
@@ -21,10 +24,11 @@ async function getSponsors(endpoint: string): Promise<Sponsor[]> {
     (sponsor): sponsor is Sponsor =>
       sponsor !== null &&
       typeof sponsor === 'object' &&
-      typeof sponsor.id === 'string' &&
-      sponsor.id.trim().length > 0 &&
-      typeof sponsor.name === 'string' &&
-      sponsor.name.trim().length > 0
+      typeof sponsor.id === 'number' &&
+      Number.isFinite(sponsor.id) &&
+      typeof sponsor.title === 'string' &&
+      sponsor.title.trim().length > 0 &&
+      typeof sponsor.description === 'string'
   )) {
     throw new Error('Unexpected sponsor response');
   }
@@ -32,8 +36,10 @@ async function getSponsors(endpoint: string): Promise<Sponsor[]> {
 }
 
 Once integration is ready, export getSponsors, make the Sponsors server component
-async, and import getSponsors and the Sponsor type. Pass the confirmed endpoint.
-Retain the current placeholder when the response is empty or unavailable:
+async, and import getSponsors and the Sponsor type. Extract the preserved
+SponsorCards into a client component and enable its commented card CSS.
+Pass the confirmed endpoint. Retain the current placeholder when the response
+is empty or unavailable; do not fall back to last year's example data:
 
 let sponsors: Sponsor[] = [];
 try {
@@ -43,11 +49,8 @@ try {
 }
 
 // Render this only when sponsors.length > 0; otherwise render the placeholder.
-<ul aria-label="Our sponsors">
-  {sponsors.map((sponsor) => (
-    <li key={sponsor.id}>{sponsor.name}</li>
-  ))}
-</ul>
+<SponsorCards sponsors={sponsors} />
 
-Add logos, descriptions, or links only when their API fields are confirmed.
+Replace the historical positional logo paths with confirmed current logo
+sources before enabling cards. Add links only when their fields are confirmed.
 */

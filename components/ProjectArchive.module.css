@@ -1,0 +1,47 @@
+.section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.headingRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+.count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(126, 209, 228, 0.9);
+}
+
+.empty {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media screen and (min-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

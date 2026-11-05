@@ -17,18 +17,20 @@ const PhotoGallery = ({ events }: PhotoGalleryProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const stripRef = useRef<HTMLDivElement>(null);
 
-  const selectedEvent = events.find((e) => e.id === selectedId);
+  // Only events with photos get a chip, so a chip never leads to an empty strip
+  const photoEvents = useMemo(() => events.filter((e) => e.photos.length > 0), [events]);
+  const selectedEvent = photoEvents.find((e) => e.id === selectedId);
 
   const photos = useMemo(
     () =>
-      (selectedEvent ? [selectedEvent] : events).flatMap((event) =>
+      (selectedEvent ? [selectedEvent] : photoEvents).flatMap((event) =>
         event.photos.map((photo) => ({
           ...photo,
           eventTitle: event.title,
-          alt: photo.altText ?? photo.caption ?? `${event.title} photo`,
+          alt: photo.altText,
         }))
       ),
-    [events, selectedEvent]
+    [photoEvents, selectedEvent]
   );
 
   const handleSelect = (id: string) => {
@@ -59,44 +61,40 @@ const PhotoGallery = ({ events }: PhotoGalleryProps) => {
     return () => window.removeEventListener("keydown", onKey);
   }, [openIndex, step]);
 
-  if (!events.some((e) => e.photos.length > 0)) return null;
+  if (photoEvents.length === 0) return null;
 
   const openPhoto = openIndex !== null ? photos[openIndex] : null;
 
   return (
     <section className={styles.section}>
       <h2 className={styles.heading}>Photo Gallery</h2>
-      <EventFilterChips events={events} selectedId={selectedId} onSelect={handleSelect} />
+      <EventFilterChips events={photoEvents} selectedId={selectedId} onSelect={handleSelect} />
 
       {selectedEvent?.description && (
         <p className={styles.eventDescription}>{selectedEvent.description}</p>
       )}
 
-      {photos.length === 0 ? (
-        <p className={styles.empty}>No photos yet.</p>
-      ) : (
-        <div className={styles.stripWrapper}>
-          <button type="button" className={`${styles.arrow} ${styles.left}`} onClick={() => scrollStrip(-1)} aria-label="Scroll photos left">
-            <FiChevronLeft size={28} />
-          </button>
-          <div className={styles.strip} ref={stripRef}>
-            {photos.map((photo, index) => (
-              <button
-                type="button"
-                key={`${selectedId}-${photo.id}`}
-                className={styles.tile}
-                onClick={() => setOpenIndex(index)}
-                aria-label={`Open photo: ${photo.alt}`}
-              >
-                <Image src={photo.url} alt={photo.alt} fill sizes="(max-width: 720px) 80vw, 400px" />
-              </button>
-            ))}
-          </div>
-          <button type="button" className={`${styles.arrow} ${styles.right}`} onClick={() => scrollStrip(1)} aria-label="Scroll photos right">
-            <FiChevronRight size={28} />
-          </button>
+      <div className={styles.stripWrapper}>
+        <button type="button" className={`${styles.arrow} ${styles.left}`} onClick={() => scrollStrip(-1)} aria-label="Scroll photos left">
+          <FiChevronLeft size={28} />
+        </button>
+        <div className={styles.strip} ref={stripRef}>
+          {photos.map((photo, index) => (
+            <button
+              type="button"
+              key={`${selectedId}-${photo.id}`}
+              className={styles.tile}
+              onClick={() => setOpenIndex(index)}
+              aria-label={`Open photo: ${photo.alt}`}
+            >
+              <Image src={photo.url} alt={photo.alt} fill sizes="(max-width: 720px) 80vw, 400px" />
+            </button>
+          ))}
         </div>
-      )}
+        <button type="button" className={`${styles.arrow} ${styles.right}`} onClick={() => scrollStrip(1)} aria-label="Scroll photos right">
+          <FiChevronRight size={28} />
+        </button>
+      </div>
 
       <AnimatePresence>
         {openPhoto && (

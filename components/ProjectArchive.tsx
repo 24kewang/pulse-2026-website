@@ -13,9 +13,11 @@ interface ProjectArchiveProps {
 const ProjectArchive = ({ events }: ProjectArchiveProps) => {
   const [selectedId, setSelectedId] = useState("all");
 
-  if (!events.some((e) => e.projects.length > 0)) return null;
+  // Only events with projects get a chip, so a chip never leads to an empty grid
+  const projectEvents = events.filter((e) => e.projects.length > 0);
+  if (projectEvents.length === 0) return null;
 
-  const projects = events
+  const projects = projectEvents
     .filter((event) => selectedId === "all" || event.id === selectedId)
     .flatMap((event) => event.projects.map((project) => ({ project, eventTitle: event.title })));
 
@@ -27,17 +29,13 @@ const ProjectArchive = ({ events }: ProjectArchiveProps) => {
           {projects.length} {projects.length === 1 ? "project" : "projects"}
         </span>
       </div>
-      <EventFilterChips events={events} selectedId={selectedId} onSelect={setSelectedId} />
+      <EventFilterChips events={projectEvents} selectedId={selectedId} onSelect={setSelectedId} />
 
-      {projects.length === 0 ? (
-        <p className={styles.empty}>No projects for this event yet.</p>
-      ) : (
-        <div className={styles.grid}>
-          {projects.map(({ project, eventTitle }) => (
-            <ProjectCard key={project.id} project={project} eventTitle={eventTitle} />
-          ))}
-        </div>
-      )}
+      <div className={styles.grid}>
+        {projects.map(({ project, eventTitle }) => (
+          <ProjectCard key={project.id} project={project} eventTitle={eventTitle} />
+        ))}
+      </div>
     </section>
   );
 };

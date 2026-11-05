@@ -10,6 +10,8 @@ export const metadata: Metadata = {
 
 export default async function PastEvents() {
   const events = await getPastEvents();
+  // The API returns every completed event, and many may have no photos or projects
+  const hasContent = events.some((e) => e.photos.length > 0 || e.projects.length > 0);
 
   return (
     <div className={styles.container}>
@@ -18,7 +20,7 @@ export default async function PastEvents() {
         A look back at previous years of Pulse: photos from the week and the projects teams built in our competitions.
       </p>
 
-      {events.length === 0 ? (
+      {!hasContent ? (
         <p className={styles.emptyMessage}>Past events are coming soon!</p>
       ) : (
         <>

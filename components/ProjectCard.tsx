@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { FiArrowUpRight, FiExternalLink, FiGithub } from "react-icons/fi";
+import { FiArrowUpRight, FiCode, FiExternalLink } from "react-icons/fi";
 import type { PastEventProject } from "@/lib/pastEvents";
 import styles from "./ProjectCard.module.css";
 
@@ -36,13 +36,13 @@ const ProjectCard = ({ project, eventTitle }: ProjectCardProps) => {
         )}
       </h3>
 
-      {teamName && <p className={styles.team}>by {teamName}</p>}
+      <p className={styles.team}>by {teamName}</p>
 
       {(repositoryUrl || projectUrl) && (
         <div className={styles.links}>
           {repositoryUrl && (
             <a href={repositoryUrl} target="_blank" rel="noopener noreferrer" className={styles.link}>
-              <FiGithub aria-hidden="true" /> Code
+              <FiCode aria-hidden="true" /> Code
             </a>
           )}
           {projectUrl && (

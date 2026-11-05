@@ -28,12 +28,6 @@
   color: rgba(126, 209, 228, 0.9);
 }
 
-.empty {
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
-  padding: 2rem 0;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr;

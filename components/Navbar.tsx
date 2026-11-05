@@ -34,6 +34,7 @@ const Navbar = () => {
       <div className={styles.linkContainer}>
         <h3><Link className={`${styles.link} ${pathname === "/" ? styles.active : ''}`} href="/">HOME</Link></h3>
         <h3><Link className={`${styles.link} ${pathname === "/events" ? styles.active : ''}`} href="/events">EVENTS</Link></h3>
+        <h3><Link className={`${styles.link} ${pathname === "/past-events" ? styles.active : ''}`} href="/past-events">PAST EVENTS</Link></h3>
         <h3><Link className={`${styles.link} ${pathname === "/our-team" ? styles.active : ''}`} href="/our-team">OUR TEAM</Link></h3>
         <h3><Link className={`${styles.link} ${pathname === "/sponsors" ? styles.active : ''}`} href="/sponsors">SPONSORS</Link></h3>
         <h3><Link className={`${styles.link} ${pathname === "/about" ? styles.active : ''}`} href="/about">CORPORATE INFO</Link></h3>
@@ -47,6 +48,7 @@ const Navbar = () => {
           <h3><Link onClick={handleClose} className={`${styles.link} ${pathname === "/" ? styles.active : ''}`} href="/">HOME</Link></h3>
           <h3><Link onClick={handleClose} className={`${styles.link} ${pathname === "/sponsors" ? styles.active : ''}`} href="/sponsors">SPONSORS</Link></h3>
           <h3><Link onClick={handleClose} className={`${styles.link} ${pathname === "/events" ? styles.active : ''}`} href="/events">EVENTS</Link></h3>
+          <h3><Link onClick={handleClose} className={`${styles.link} ${pathname === "/past-events" ? styles.active : ''}`} href="/past-events">PAST EVENTS</Link></h3>
           <h3><Link onClick={handleClose} className={`${styles.link} ${pathname === "/our-team" ? styles.active : ''}`} href="/our-team">OUR TEAM</Link></h3>
           <h3><Link onClick={handleClose} className={`${styles.link} ${pathname === "/about" ? styles.active : ''}`} href="/about">CORPORATE INFO</Link></h3>
           <h3><Link onClick={handleClose} className={`${styles.link} ${pathname === "/contact-us" ? styles.active : ''}`} href="/contact-us">CONTACT US</Link></h3>

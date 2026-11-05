@@ -1,0 +1,46 @@
+.chipRow {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.25rem 1rem;
+  margin-bottom: 1rem;
+  scrollbar-width: none;
+}
+
+.chipRow::-webkit-scrollbar {
+  display: none;
+}
+
+.chip {
+  flex-shrink: 0;
+  padding: 0.5rem 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(16, 14, 32, 0.5);
+  border: 1px solid rgba(126, 209, 228, 0.4);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.chip:hover {
+  color: white;
+  border-color: rgba(126, 209, 228, 0.8);
+  box-shadow: 0px 0px 12px rgba(126, 209, 228, 0.35);
+}
+
+.chip.active {
+  color: #0b2066;
+  background: rgba(126, 209, 228, 0.9);
+  border-color: rgba(126, 209, 228, 1);
+  box-shadow: 0px 0px 16px rgba(126, 209, 228, 0.5);
+}
+
+@media screen and (min-width: 720px) {
+  .chipRow {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}

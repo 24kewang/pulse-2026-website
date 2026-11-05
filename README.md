@@ -16,6 +16,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Environment variables
+
+- `NEXT_PUBLIC_API_URL` — base URL of the backend API (e.g. `https://api.example.com`). The Past Events page fetches `GET /past-events` from it. If unset, the page uses mock data from `lib/mockPastEvents.ts`.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

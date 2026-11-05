@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 2rem;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(126, 209, 228, 0.6);
+  width: auto;
+  display: inline-block;
+}
+
+.intro {
+  max-width: 640px;
+  margin: 0 0 2.5rem;
+  padding: 0 1rem;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.emptyMessage {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 3rem 1rem;
+  letter-spacing: 0.05em;
+}

@@ -1,48 +1,39 @@
 import { mockPastEvents } from "@/lib/mockPastEvents";
 
-// Nullability marked "assumed" is unconfirmed; tighten once the backend PR lands
+// Mirrors GET /past-events in pulse-api (src/services/past-events/past-events-schemas.ts)
 export interface PastEventPhoto {
-  id: string;
-  url: string;
-  altText: string | null;       // assumed
-  caption: string | null;       // assumed
+  id: string;                   // uuid
+  url: string;                  // absolute http(s) Supabase public URL
+  altText: string;              // non-empty
+  caption: string | null;
 }
 
 export interface PastEventProject {
-  id: string;
-  projectName: string;
-  competitionType: string;
-  teamName: string | null;      // assumed
-  projectUrl: string | null;    // assumed
-  repositoryUrl: string | null; // assumed
+  id: string;                   // uuid
+  projectName: string;          // non-empty
+  competitionType: string;      // free text, no fixed set
+  teamName: string;             // non-empty
+  projectUrl: string | null;    // http(s) when set
+  repositoryUrl: string | null; // http(s) when set, not necessarily GitHub
 }
 
 export interface PastEvent {
-  id: string;
+  id: string;                   // uuid
   title: string;
   description: string | null;
-  startTime: string;
-  endTime: string;
-  imageUrl: string | null;
-  imageAlt: string | null;
+  startTime: string;            // ISO 8601, `Z` or a numeric offset
+  endTime: string;              // ISO 8601, `Z` or a numeric offset
+  imageUrl: string | null;      // photos[0].url, null when there are no photos
+  imageAlt: string | null;      // photos[0].altText, null when there are no photos
   photos: PastEventPhoto[];
   projects: PastEventProject[];
 }
-
-const normalize = (events: PastEvent[]): PastEvent[] =>
-  events
-    .map((event) => ({
-      ...event,
-      photos: event.photos ?? [],
-      projects: event.projects ?? [],
-    }))
-    .sort((a, b) => new Date(b.startTime).getTime() - new Date(a.startTime).getTime());
 
 export async function getPastEvents(): Promise<PastEvent[]> {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
   // No backend configured yet, so serve mock data
-  if (!baseUrl) return normalize(mockPastEvents);
+  if (!baseUrl) return mockPastEvents;
 
   try {
     const res = await fetch(`${baseUrl.replace(/\/$/, "")}/past-events`, {
@@ -52,7 +43,8 @@ export async function getPastEvents(): Promise<PastEvent[]> {
       console.error(`GET /past-events failed with status ${res.status}`);
       return [];
     }
-    return normalize(await res.json());
+    // The API already sorts events, photos and projects and always sends both arrays
+    return await res.json();
   } catch (e) {
     console.error("GET /past-events failed:", e);
     return [];

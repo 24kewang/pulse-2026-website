@@ -19,6 +19,11 @@
   display: inline-block;
 }
 
+.scheduleNotice {
+  padding: 0 1rem;
+  text-align: center;
+}
+
 .navContainer {
   width: 100%;
   display: none;

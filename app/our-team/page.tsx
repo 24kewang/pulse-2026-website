@@ -7,14 +7,16 @@ const committees = [
   "Marketing", "Corporate", "Competitions", "Technical",
 ];
 
+export const dynamic = "force-dynamic";
+
 export default async function OurTeam() {
-  const year = "2025-26";
-  const members = await getTeamMembers(year);
+  const members = await getTeamMembers();
+  const year = members[0]?.year;
   const sections = [...new Set([...committees, ...members.map((member) => member.committee)])];
 
   return (
     <div className={styles.container}>
-      <h1>{year} Team</h1>
+      <h1>{year ? `${year} Team` : "Our Team"}</h1>
       {members.length === 0 && <p>Team information coming soon.</p>}
       {sections.map((committee) => {
         const team = members

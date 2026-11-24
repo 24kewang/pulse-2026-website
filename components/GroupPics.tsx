@@ -15,7 +15,8 @@ function GroupPics({ data }: GroupPicsProps) {
         {data.map(({ id, name, imageUrl, position }) => (
           <div key={id} className={styles.picContainer}>
             <div className={styles.frame}>
-              <Image src={imageUrl || "/assets/team-placeholder.svg"} alt={name} width={220} height={220} />
+              <Image src={imageUrl || "/assets/team-placeholder.svg"} alt={name} width={220} height={220}
+                unoptimized={!!imageUrl && /^https?:\/\//.test(imageUrl)} />
             </div>
             <div className={styles.caption}>
               <span className={styles.name}>{name}</span>
